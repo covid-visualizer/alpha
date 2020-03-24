@@ -88,7 +88,7 @@ Don't pay attention to the last one or two characters in the name of each parame
 
 Dates are specified by the format `M--D` where M and D are the number of the month and the day, respectively.
 * Note there are two hyphens between the month number and the day number.  For example the ides of March would be `3--15`
-* This unusual format is used because spreadsheets often change the format of entries such as `3/15` into some internal representation for a date that may vary between different spreadsheet vendors.
+* This unusual format is used because spreadsheets often change the format of entries such as 3/15 into some internal representation for a date that may vary between different spreadsheet vendors.
 
 <a name="python"></a>
 # Python Code
@@ -98,10 +98,10 @@ Dates are specified by the format `M--D` where M and D are the number of the mon
 If you want to add a new parameter to the spreadsheet and to the software, you must pre-define it in the code by adding its full name to the other "keys" in `County.legal_keys`
 
 A parameter's "full name" includes one or two terminal characters that specifies the parameter's data-type:
-* # = integer
-* ## = float
-* $ = string
-* ^ = date in `M--D` format
+* `#` = integer
+* `##` = float
+* `$` = string
+* `^` = date in `M--D` format
 
 When you use the parameter in the code, do not use the terminal data-type characters.
 
