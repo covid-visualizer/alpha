@@ -95,7 +95,7 @@ Dates are specified by the format `M--D` where M and D are the number of the mon
 
 ### Defining new parameters
 
-If you want to add a new parameter to the spreadsheet and to the software, you must pre-define it in the code by adding its full name to the other "keys" in `County.legal_keys`
+If you want to add a new parameter to the spreadsheet and to the software, you must pre-define it in the Python code by adding its full name to the other "keys" in `County.legal_keys`
 
 A parameter's "full name" includes one or two terminal characters that specifies the parameter's data-type:
 * `#` = integer
@@ -103,9 +103,15 @@ A parameter's "full name" includes one or two terminal characters that specifies
 * `$` = string
 * `^` = date in `M--D` format
 
-When you use the parameter in the code, do not use the terminal data-type characters.
+When you use the parameter in Python code, do not use the terminal data-type characters.
 
 New parameters become a value in `County` instances.
+
+### Defining new plots
+
+You're on your own.  The code for this has become a little spaghetti-ish.  Each type of plot is its own class.  At a minimum, it should implement a `draw` method having no arguments except `self`.  
+
+All draw types are called with all county instances.  Your plot class should check if it should draw its plot for each particular county, and if it's not supposed to draw it should just return.
 
 <a name="extensions"></a>
 # Ideas for Extensions
