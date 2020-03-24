@@ -71,6 +71,8 @@ CoronaCurves produces four classes of graphs, some of which include interesting 
 <a name="model"></a>
 # Model and Math
 
+A simple extrapolation model is valid only in the very near term.
+
 https://stackoverflow.com/questions/3433486/how-to-do-exponential-and-logarithmic-curve-fitting-in-python-i-found-only-poly
 
 <a name="dataconfig"></a>
