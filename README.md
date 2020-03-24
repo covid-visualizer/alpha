@@ -10,6 +10,8 @@ Expect evolution in the software and incompatible changes.  It is being made ava
 
 * <a href="#requirements">Requirements and installation</a>
 
+* <a href="#model">Model and Math</a>
+
 * <a href="#dataconfig">Data Configuration</a>
 
 * <a href="#python">Python code</a>
@@ -26,6 +28,11 @@ You will need Python 2.7 and the following code modules:
 * Scipy
 
 Use `pip` to install the code modules.  The `requirements.txt` file lists the version numbers that the developer used.  As always, installing inside a virtualenv is recommended.
+
+<a name="model"></a>
+# Model and Math
+
+https://stackoverflow.com/questions/3433486/how-to-do-exponential-and-logarithmic-curve-fitting-in-python-i-found-only-poly
 
 <a name="dataconfig"></a>
 # Data Configuration
