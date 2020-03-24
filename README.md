@@ -32,13 +32,17 @@ Use `pip` to install the code modules.  The `requirements.txt` file lists the ve
 
 Geographic regions are universally referred to as "counties."  That is a reflection of the application focus of the original implementation.
 
+Sometimes, if you are graphing several counties in one plot, the title of the plot may get so wide as to chop off the beginning and the end.  If this matters, reduce the number of counties in the plot, or shorten the "short name" for the counties.
+
 <a name="features"></a>
 # Features
 
 CoronaCurves produces four classes of graphs, some of which include interesting quantitative data.  In limited areas, it is designed to reflect data uncertainties.  All data are imported from a spreadsheet (.csv) file.
 
 * Plot 0 -- simple graph of cases over time for multiple geographic regions, on a linear axis
-    * You can define as many geographic regions you want.  You can use spreadsheet column-summation to define composite geographical areas from smaller ones.
+    * You can define as many counties (geographic regions) you want.  You can use spreadsheet column-summation to define composite counties from smaller ones.
+    * You can graph multiple counties on one plot.
+    * You can annotate each county's line with a mark indicating when the county began lockdown.
     * Example
     
 * Plot 1 -- same as Plot 0, but with a logarithmic y-axis
@@ -48,8 +52,19 @@ CoronaCurves produces four classes of graphs, some of which include interesting 
 
 * Plot 2 -- extrapolated total cases
     * You specify an extrapolation start-date, and CoronaCurves best-fits an exponential to the total-case curve starting at that date.  The best-fit-exponential will appear as a straight line because of the logarithmic y-axis.
+    * The doubling-time for cases is output within the title of the plots.  
 
 * Plot 3 -- danger lines
+    * This is the most helpful graph for leaders.
+    * For a given county, it fuses the expected future growth in cases with the capacity of the healthcare system in that county.
+    * Only one county can be shown on a single plot.
+    * Currently, these capacities are enabled:
+        * Total staffed hospital beds in the county
+        * Number of ventilators in the county
+        * Estimated number of intensive care unit (ICU) beds that are open on a typical pre-epidemic day.
+            * This number is specified as a range
+    * The graph shows when the epidemic is expected to hit each of the capacity limits.
+        * For the number of ICU beds, the uncertainty in the epidemic is propagated to an uncertainty in the time when that capacity is exceeded.
 
 <a name="model"></a>
 # Model and Math
@@ -68,4 +83,5 @@ https://stackoverflow.com/questions/3433486/how-to-do-exponential-and-logarithmi
 * For each model parameter, make it possible to specify a default value to use in all counties.  This could be done in column 2 of the data spreadsheet or in a YAML file.  Column 2 seems like a better idea -- so everything is visible in one place.
 * Add command-line options
     * Set y-axis to logarithmic or linear scale.  Will remove need to have plot 0 and plot 1 as separate entities.
+* Increase the number of annotations on the curves.  Currently, the only annotation is the county-wide lockdown date.
 * Clean up all the quirks.
