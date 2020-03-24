@@ -95,6 +95,10 @@ The individual lines of the spreadsheet define one of three things:
     * The day is specified in column 1 using the `M--D` format.
 * A comment
     * If the value of column 1 in the row starts with the string `comment` (upper or lower case) then the line is thereafter ignored.
+    
+It is not always necessary to include a parameter value for every parameter value.  It depends on the type
+of plot being drawn.  Plot 3 requires almost all data, while Plot 0 requires very little.
+
 
 ### Parameters
 
