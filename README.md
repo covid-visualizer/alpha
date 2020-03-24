@@ -52,6 +52,7 @@ CoronaCurves produces four classes of graphs, some of which include interesting 
 
 * Plot 2 -- extrapolated total cases
     * You specify an extrapolation start-date, and CoronaCurves best-fits an exponential to the total-case curve starting at that date.  The best-fit-exponential will appear as a straight line because of the logarithmic y-axis.
+    * The start of the extrapolation is indicated with a large dot on the plot.
     * The doubling-time for cases is output within the title of the plots.  
     * <a href="https://raw.githubusercontent.com/coronacurves/version01/master/example_plots/plot2_example.png">Example</a>
 
