@@ -79,9 +79,15 @@ CoronaCurves produces four classes of graphs, some of which include interesting 
 <a name="model"></a>
 # Model and Math
 
-A simple extrapolation model is valid only in the very near term.
+The model fits a line of the form `y = a * exp(b*x)` to a portion of the cases-vs-days curve, where `a` and `b` are the constants that define the best-fit curve.  <a href="https://stackoverflow.com/questions/3433486/how-to-do-exponential-and-logarithmic-curve-fitting-in-python-i-found-only-poly">Stack Overflow</a> shows how to do this.
 
-https://stackoverflow.com/questions/3433486/how-to-do-exponential-and-logarithmic-curve-fitting-in-python-i-found-only-poly
+The doubling time, `d`, in days, is easily calculated as `d = (ln 2)/b`.  The math to prove this is trivially easy.
+
+### Limitations
+
+A simple extrapolation model is valid only in the very near term.  
+
+No sensitivity analysis provided.
 
 <a name="dataconfig"></a>
 # Data Configuration
@@ -141,3 +147,4 @@ All draw types are called with all county instances.  Your plot class should che
     * Set y-axis to logarithmic or linear scale.  Will remove need to have plot 0 and plot 1 as separate entities.
 * Increase the number of annotations on the curves.  Currently, the only annotation is the county-wide lockdown date.
 * Clean up all the quirks.
+* Have the software do a sensitivity analysis and produce error bars on the forecast for the number of cases.  Step back day-by-day from the present, dropping that day from the fitting, and tabulate the goodness-of-fit of each fitted curve curve. The error bars could simply be the most deviant curves, above and below the best-fit overall curve.  Note: Can't simply pick the number of days to fit via simple comparison of goodness-of-sit: goodness probably drops monotonically with the number of days included.
