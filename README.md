@@ -53,6 +53,7 @@ CoronaCurves produces four classes of graphs, some of which include interesting 
 * Plot 2 -- extrapolated total cases
     * You specify an extrapolation start-date, and CoronaCurves best-fits an exponential to the total-case curve starting at that date.  The best-fit-exponential will appear as a straight line because of the logarithmic y-axis.
     * The doubling-time for cases is output within the title of the plots.  
+    * Example
 
 * Plot 3 -- danger lines
     * This is the most helpful graph for leaders.
@@ -65,6 +66,7 @@ CoronaCurves produces four classes of graphs, some of which include interesting 
             * This number is specified as a range
     * The graph shows when the epidemic is expected to hit each of the capacity limits.
         * For the number of ICU beds, the uncertainty in the epidemic is propagated to an uncertainty in the time when that capacity is exceeded.
+    * Example
 
 <a name="model"></a>
 # Model and Math
