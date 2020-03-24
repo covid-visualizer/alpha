@@ -86,10 +86,12 @@ https://stackoverflow.com/questions/3433486/how-to-do-exponential-and-logarithmi
 <a name="dataconfig"></a>
 # Data Configuration
 
-CoronaCurves reads a single `.csv` spreadsheet file whose individual lines specifies one of three things:
+CoronaCurves reads all of its data from a single file: the `countydata6.csv` spreadsheet.  Make sure it is saved in .csv format.
+
+The individual lines of the spreadsheet define one of three things:
 * A parameter
     * The full name of the parameter appears in column 1.  The value for each each county appears in its own column in the spreadsheet.
-* A numerical value for the number of cases that appeared on single day
+* A numerical value for the number of cases that appeared on that single day
     * The day is specified in column 1 using the `M--D` format.
 * A comment
     * If the value of column 1 in the row starts with the string `comment` (upper or lower case) then the line is thereafter ignored.
