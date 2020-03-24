@@ -125,9 +125,17 @@ Dates are specified by the format `M--D` where M and D are the number of the mon
 * `ventilators#` = The number of ventilators in the county.  This is assumed to include ventilators in neonatal ICUs.
 * `icu_open_lo##` = The fraction of the county ventilators that determine the lower bound for estimating the number of typically open ICU beds in the county.  That is, the model multiples the number of ventilators in the county by the fractional number `icu_open_lo##` and gets a number of beds that are typically open in that county's ICUs.  This is the minimum number of open beds.
 * `icu_open_hi##` = Same as `icu_open_lo##` but is used to calculate the maximum number of ICU beds typically available in the county.
+* `icu_fraction##` = The fraction of cases that are admitted to the ICU.  Note that this should generally change when testing transitions from constrained to unconstrained.
+* `hosp_fraction##` = The fraction of cases that are admitted to the hospital.  Note that this should generally change when testing transitions from constrained to unconstrained.
+* `project_from^` = The day, in `M--D` format, starting the epoch whose case-numbers are fitted to a curve to project the number of future cases.
+* `project_ndays#` = The number of days ahead to look when projecting future case counts.
+* `drawplot0#` = Whether or not to draw Plot0 for the county.  If zero, it will not be drawn.  Otherwise, it will.
+* `drawplot1#` and `drawplot2#` and `drawplot3#` = Same approach as for `drawplot0#`
 
 <a name="python"></a>
 # Python Code
+
+The code is not heavily commented.  It probably won't be unless there is real demand.
 
 ### Defining new parameters
 
