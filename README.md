@@ -6,15 +6,18 @@ CoronaCurves is easy to set up and run out of the box.  It is not, however, conf
 
 Expect evolution in the software and incompatible changes.  CoronaCurves is being made available early -- because that's what an epidemic demands.
 
+Ultimately, getting good data and understanding its baked-in assumptions will be your most difficult task.  That is as it should be.
+
+# Contents
+
 * <a href="#requirements">Requirements, installation, and execution</a>
 * <a href="#features">Features</a>
 * <a href="#quirks">Quirks</a>
-* <a href="#model">Model and Math</a>
-* <a href="#dataconfig">Data Configuration</a>
+* <a href="#model">Model and math</a>
+* <a href="#dataconfig">Data configuration</a>
 * <a href="#python">Python code</a>
 * <a href="#extensions">Ideas for extensions</a>
-
-Ultimately, getting good data and understanding its baked-in assumptions will be your most difficult task.  That is as it should be.
+* <a href="#references">A few references</a>
 
 <a name="requirements"></a>
 # Requirements, Installation, and Execution
@@ -166,3 +169,27 @@ All draw types are called with all county instances.  Your plot class should che
 * Increase the number of annotations on the curves.  Currently, the only annotation is the county-wide lockdown date.
 * Clean up all the quirks.
 * Have the software do a sensitivity analysis and produce error bars on the forecast for the number of cases.  Step back day-by-day from the present, dropping that day from the fitting, and tabulate the goodness-of-fit of each fitted curve curve. The error bars could simply be the most deviant curves, above and below the best-fit overall curve.  Note: Can't simply pick the number of days to fit via simple comparison of goodness-of-sit: goodness probably drops monotonically with the number of days included.
+
+<a name="references"></a>
+# A Few References
+
+### Fraction of cases needing hospitalization (set as 5%)
+
+* Substantiation 1:
+    * 22% of cases admitted to hospital in California (21 March)
+    * Imperial College model assumes 30% of hospitalized patients need ICU
+    * Combination = 6.6%  round down to 5%
+* Substantiation 2:
+    * Harvard Global Health Institute model of “moderate” spread in USA calculates 5%
+    * https://laist.com/2020/03/17/are-los-angeles-hospitals-ready-for-coronavirus.php
+* Fraction will change as testing becomes more widespread
+
+### Estimating typicall-open ICU beds from the number of ventilators
+
+* Total ICU beds = Vents / 1.12
+    * In LA County: Vents = 2463, ICU beds = 2200.  Ratio = 1.12
+* Non-neonatal ICU beds = 0.77 * Total ICU beds
+    * In USA, 23/96 thousand ICU beds are neonatal ICU beds https://sccm.org/Blog/March-2020/United-States-Resource-Availability-for-COVID-19
+* Open ICU beds = Non-neonatal ICU beds / 3
+    * "Roughly two-in-three ICU beds are already being used across the 50 largest intensive care wards in California’s hospitals, according to a Sacramento Bee review of state hospital data." https://www.sacbee.com/news/coronavirus/article241311296.html
+* Combine to yield: Open ICU beds = 0.23 * Vents
