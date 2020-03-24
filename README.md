@@ -103,10 +103,10 @@ The individual lines of the spreadsheet define one of three things:
     * If the value of column 1 in the row starts with the string `comment` (upper or lower case) then the line is thereafter ignored.
     
 It is not always necessary to include a parameter value for every parameter value.  It depends on the type
-of plot being drawn.  Plot 3 requires almost all data, while Plot 0 requires very little.
+of plot being drawn.  Plot 3 requires that all parameters be defined, while Plot 0 requires very few.
 
 
-### Parameters
+### Parameters -- General Remarks
 
 Don't pay attention to the last one or two characters in the name of each parameter.  Those are symbols that tell the software whether the parameter is an integer (#), a floating-point number (##), a character string ($), or a date (^).
 
@@ -115,6 +115,16 @@ Don't pay attention to the last one or two characters in the name of each parame
 Dates are specified by the format `M--D` where M and D are the number of the month and the day, respectively.
 * Note there are two hyphens between the month number and the day number.  For example the ides of March would be `3--15`
 * This unusual format is used because spreadsheets often change the format of entries such as 3/15 into some internal representation for a date that may vary between different spreadsheet vendors.
+
+### Parameters -- Data Dictionary
+
+* `county_name$` = The long name of the county. Is used in plot titles when there is no concern about the length of the title.
+* `shortname$` = The short name of the county. Is used in plot titles when there is concern about the length of the title.  Is also used to label lines in the plot.
+* `lockdown^` = The date that the county-wide lockdown began, in `M--D` format.
+* `staffed_beds#` = The number of hospital beds in the county that have nurses assigned to them.
+* `ventilators#` = The number of ventilators in the county.  This is assumed to include ventilators in neonatal ICUs.
+* `icu_open_lo##` = The fraction of the county ventilators that determine the lower bound for estimating the number of typically open ICU beds in the county.  That is, the model multiples the number of ventilators in the county by the fractional number `icu_open_lo##` and gets a number of beds that are typically open in that county's ICUs.  This is the minimum number of open beds.
+* `icu_open_hi##` = Same as `icu_open_lo##` but is used to calculate the maximum number of ICU beds typically available in the county.
 
 <a name="python"></a>
 # Python Code
