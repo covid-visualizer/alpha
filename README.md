@@ -43,17 +43,17 @@ CoronaCurves produces four classes of graphs, some of which include interesting 
     * You can define as many counties (geographic regions) you want.  You can use spreadsheet column-summation to define composite counties from smaller ones.
     * You can graph multiple counties on one plot.
     * You can annotate each county's line with a mark indicating when the county began lockdown.
-    * Example
+    * <a href="https://raw.githubusercontent.com/coronacurves/version01/master/example_plots/plot0_example.png">Example</a>
     
 * Plot 1 -- same as Plot 0, but with a logarithmic y-axis
     * When cases are increasing exponentially, this reduces the exponential curve to a straight line.
     * Use this graph to eyeball whether the epidemic curve is flattening in any geographic region.
-    * Example
+    * <a href="https://raw.githubusercontent.com/coronacurves/version01/master/example_plots/plot1_example.png">Example</a>
 
 * Plot 2 -- extrapolated total cases
     * You specify an extrapolation start-date, and CoronaCurves best-fits an exponential to the total-case curve starting at that date.  The best-fit-exponential will appear as a straight line because of the logarithmic y-axis.
     * The doubling-time for cases is output within the title of the plots.  
-    * Example
+    * <a href="https://raw.githubusercontent.com/coronacurves/version01/master/example_plots/plot2_example.png">Example</a>
 
 * Plot 3 -- danger lines
     * This is the most helpful graph for leaders.
