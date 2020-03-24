@@ -67,7 +67,7 @@ CoronaCurves produces four classes of graphs, some of which include interesting 
             * This number is specified as a range
     * The graph shows when the epidemic is expected to hit each of the capacity limits.
         * For the number of ICU beds, the uncertainty in the epidemic is propagated to an uncertainty in the time when that capacity is exceeded.
-    * Example
+    * <a href="https://raw.githubusercontent.com/coronacurves/version01/master/example_plots/plot3_example.png">Example</a>
 
 <a name="model"></a>
 # Model and Math
