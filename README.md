@@ -38,6 +38,8 @@ Geographic regions are universally referred to as "counties."  That is a reflect
 
 Sometimes, if you are graphing several counties in one plot, the title of the plot may get so wide as to chop off the beginning and the end.  If this matters, reduce the number of counties in the plot, or shorten the "short name" for the counties.
 
+The name of the data-input file is hardcoded as `countydata6.csv`.  Sorry about that, but it's easy enough to change in the code.  Ideally, the name should be a command-line argument that has a default.
+
 <a name="features"></a>
 # Features
 
@@ -84,7 +86,19 @@ https://stackoverflow.com/questions/3433486/how-to-do-exponential-and-logarithmi
 <a name="dataconfig"></a>
 # Data Configuration
 
+CoronaCurves reads a single `.csv` spreadsheet file whose individual lines specifies one of three things:
+* A parameter
+    * The full name of the parameter appears in column 1.  The value for each each county appears in its own column in the spreadsheet.
+* A numerical value for the number of cases that appeared on single day
+    * The day is specified in column 1 using the `M--D` format.
+* A comment
+    * If the value of column 1 in the row starts with the string `comment` (upper or lower case) then the line is thereafter ignored.
+
+### Parameters
+
 Don't pay attention to the last one or two characters in the name of each parameter.  Those are symbols that tell the software whether the parameter is an integer (#), a floating-point number (##), a character string ($), or a date (^).
+
+### Dates
 
 Dates are specified by the format `M--D` where M and D are the number of the month and the day, respectively.
 * Note there are two hyphens between the month number and the day number.  For example the ides of March would be `3--15`
