@@ -6,9 +6,11 @@ CoronaCurves is easy to set up and run out of the box.  It is not, however, conf
 
 Ultimately, getting good data and understanding its baked-in assumptions will be your most difficult task.  That is as it should be.
 
-Expect evolution in the software and incompatible changes.  It is being made available early -- because that's what an epidemic demands.
+Expect evolution in the software and incompatible changes.  CoronaCurves is being made available early -- because that's what an epidemic demands.
 
 * <a href="#requirements">Requirements and installation</a>
+
+* <a href="#features">Features</a>
 
 * <a href="#model">Model and Math</a>
 
@@ -28,6 +30,22 @@ You will need Python 2.7 and the following code modules:
 * Scipy
 
 Use `pip` to install the code modules.  The `requirements.txt` file lists the version numbers that the developer used.  As always, installing inside a virtualenv is recommended.
+
+<a name="features"></a>
+# Features
+
+CoronaCurves produces four classes of graphs, some of which include interesting quantitative data.  In limited areas, it is designed to reflect data uncertainties.  All data are imported from a spreadsheet (.csv) file.
+
+* Plot 0 -- simple graph of cases over time for multiple geographic regions, on a linear axis
+    * You can define as many geographic regions you want.  You can use spreadsheet column-summation to define composite geographical areas from smaller ones.
+    * Example
+    
+* Plot 1 -- same as Plot 0, but with a logarithmic y-axis
+    * When cases are increasing exponentially, this reduces the exponential curve to a straight line.
+    * Use this graph to eyeball whether the epidemic curve is flattening in any geographic region.
+    * Example
+
+* Plot 2 -- extrapolated total cases
 
 <a name="model"></a>
 # Model and Math
