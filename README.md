@@ -8,11 +8,20 @@ Ultimately, getting good data and understanding its baked-in assumptions will be
 
 * <a href="#requirements">Requirements and installation</a>
 
-* Data feed
+* <a href="#dataconfig>Data Configuration</a>
 
-* Python code
+* <a href="#python>Python code</a>
 
-* Ideas for extensions
+* <a href="#extensions>Ideas for extensions</a>
 
 <a name="requirements"></a>
-#### Requirements and Installation
+# Requirements and Installation
+
+<a name="dataconfig"></a>
+# Data Configuration
+
+<a name="python"></a>
+# Python Code
+
+<a name="extensions"></a>
+# Ideas for Extensions
