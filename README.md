@@ -43,6 +43,7 @@ CoronaCurves produces four classes of graphs, some of which include interesting 
     * You can define as many counties (geographic regions) you want.  You can use spreadsheet column-summation to define composite counties from smaller ones.
     * You can graph multiple counties on one plot.
     * You can annotate each county's line with a mark indicating when the county began lockdown.
+    * In all plots, days are counted relative to the day the plot is generated, which is labeled as Day 0.  Negatively-numbered days are in the past. Positively-numbered days are in the future.
     * <a href="https://raw.githubusercontent.com/coronacurves/version01/master/example_plots/plot0_example.png">Example</a>
     
 * Plot 1 -- same as Plot 0, but with a logarithmic y-axis
