@@ -37,7 +37,7 @@ Sometimes, if you are graphing several counties in one plot, the title of the pl
 <a name="features"></a>
 # Features
 
-CoronaCurves produces four classes of graphs, some of which include interesting quantitative data.  In limited areas, it is designed to reflect data uncertainties.  All data are imported from a spreadsheet (.csv) file.
+CoronaCurves produces four classes of graphs, some of which include interesting quantitative data.  In limited areas, it is designed to reflect data uncertainties.  All data are imported from a spreadsheet (.csv) file. The case numbers are all open source from the <a href="https://projects.sfchronicle.com/2020/coronavirus-map/">San Francisco Chronicle</a> and the hospital capacity numbers are hypothetical.
 
 * Plot 0 -- simple graph of cases over time for multiple geographic regions, on a linear axis
     * You can define as many counties (geographic regions) you want.  You can use spreadsheet column-summation to define composite counties from smaller ones.
