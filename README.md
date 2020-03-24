@@ -6,7 +6,7 @@ CoronaCurves is easy to set up and run out of the box.  It is not, however, conf
 
 Expect evolution in the software and incompatible changes.  CoronaCurves is being made available early -- because that's what an epidemic demands.
 
-* <a href="#requirements">Requirements and installation</a>
+* <a href="#requirements">Requirements, installation, and execution</a>
 * <a href="#features">Features</a>
 * <a href="#quirks">Quirks</a>
 * <a href="#model">Model and Math</a>
@@ -17,7 +17,7 @@ Expect evolution in the software and incompatible changes.  CoronaCurves is bein
 Ultimately, getting good data and understanding its baked-in assumptions will be your most difficult task.  That is as it should be.
 
 <a name="requirements"></a>
-# Requirements and Installation
+# Requirements, Installation, and Execution
 
 You will need Python 2.7 and the following code modules:
 
@@ -26,6 +26,10 @@ You will need Python 2.7 and the following code modules:
 * Scipy
 
 Use `pip` to install the code modules.  The `requirements.txt` file lists the version numbers that the developer used.  As always, installing inside a virtualenv is recommended.
+
+Execution is normally via the command-line invocation: `python coronacurves.py`
+
+For the moment there are no command-line arguments.  You should execute the above command while your command-line tool has, as its current working directory, the same directory in which `coronacurves.py` is saved.  No fooling with PYTHONPATH is needed.
 
 <a name="quirks"></a>
 # Quirks
@@ -79,6 +83,10 @@ https://stackoverflow.com/questions/3433486/how-to-do-exponential-and-logarithmi
 
 <a name="dataconfig"></a>
 # Data Configuration
+
+Dates are specified by the format `M--D` where M and D are the number of the month and the day, respectively.
+* Note there are two hyphens between the month number and the day number.  For example the ides of March would be `3--15`
+* This unusual format is used because spreadsheets often change the format of entries such as `3/15` into some internal representation for a date that may vary between different spreadsheet vendors.
 
 <a name="python"></a>
 # Python Code
