@@ -176,9 +176,7 @@ All draw types are called with all county instances.  Your plot class should che
 ### Fraction of cases needing hospitalization (set as 5%)
 
 * Substantiation 1:
-    * 22% of cases admitted to hospital in California (21 March)
-    * Imperial College model assumes 30% of hospitalized patients need ICU
-    * Combination = 6.6%  round down to 5%
+    * Multiply the percentage of cases admitted to hospital in California (21 March) by the fraction of hospitalized covid-19 patients who need the ICU (30% in the <a href="https://www.imperial.ac.uk/media/imperial-college/medicine/sph/ide/gida-fellowships/Imperial-College-COVID19-NPI-modelling-16-03-2020.pdf">Imperial College model</a>).  When rounded, yields approximately 5%.
 * Substantiation 2:
     * Harvard Global Health Institute model of “moderate” spread in USA calculates 5%
     * https://laist.com/2020/03/17/are-los-angeles-hospitals-ready-for-coronavirus.php
@@ -187,7 +185,7 @@ All draw types are called with all county instances.  Your plot class should che
 ### Estimating typicall-open ICU beds from the number of ventilators
 
 * Total ICU beds = Vents / 1.12
-    * In LA County: Vents = 2463, ICU beds = 2200.  Ratio = 1.12
+    * In LA County, the ratio of the number of ventilators to the total number of ICU beds is 1.12
 * Non-neonatal ICU beds = 0.77 * Total ICU beds
     * In USA, 23/96 thousand ICU beds are neonatal ICU beds https://sccm.org/Blog/March-2020/United-States-Resource-Availability-for-COVID-19
 * Open ICU beds = Non-neonatal ICU beds / 3
