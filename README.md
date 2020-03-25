@@ -182,7 +182,7 @@ All draw types are called with all county instances.  Your plot class should che
     * https://laist.com/2020/03/17/are-los-angeles-hospitals-ready-for-coronavirus.php
 * Fraction will change as testing becomes more widespread
 
-### Estimating typicall-open ICU beds from the number of ventilators
+### Estimating typically-open ICU beds from the number of ventilators
 
 * Total ICU beds = Vents / 1.12
     * In LA County, the ratio of the number of ventilators to the total number of ICU beds is 1.12
