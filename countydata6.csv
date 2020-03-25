@@ -1,0 +1,44 @@
+county_name,LA County,Santa Clara County,San Mateo County,San Francisco,Alameda County,Contra Costa,SF Bay Area 5,San Diego County,Sacramento County,San Joaquin County,Sacramento+SanJoaquin Counties,India
+shortname,LA County,Santa Clara,San Mateo,San Francisco,Alameda,Contra Costa,SF Bay5,San Diego,Sacramento,San Joaquin,Sac+Quin,India
+3--23,536,321,142,131,122,71,787,230,88,51,139,
+3--22,409,302,118,108,105,61,694,178,53,45,98,0
+3--21,359,263,110,84,68,51,576,159,53,31,84,195
+3--20,292,196,100,76,48,46,466,131,53,25,78,195
+3--19,231,189,89,70,38,42,428,105,45,17,62,151
+3--18,190,175,80,51,34,41,381,80,40,14,54,137
+3--17,144,155,64,43,30,38,330,60,40,13,53,137
+3--16,94,138,41,43,18,34,274,39,33,9,42,114
+3--15,69,114,32,40,18,29,233,39,32,8,40,107
+3--14,40,91,32,31,10,29,193,11,29,8,37,82
+3--13,40,79,20,26,9,17,151,8,17,8,25,74
+3--12,31,66,14,17,5,13,115,8,10,3,13,73
+3--11,28,48,8,17,5,10,88,3,10,1,11,60
+3--10,17,45,8,13,3,10,79,3,10,1,11,44
+3--9,16,43,1,8,3,9,64,3,10,,10,43
+3--8,14,37,1,8,3,4,53,3,3,,3,34
+3--7,14,32,1,2,3,4,42,3,3,,3,31
+3--6,13,24,1,2,2,1,30,3,1,,1,30
+3--5,11,20,1,,2,1,24,3,1,,1,29
+3--4,7,14,1,,2,1,18,2,1,,1,6
+3--3,1,11,1,,2,1,15,2,1,,1,5
+3--2,1,9,1,,1,,11,2,1,,1,3
+3--1,1,7,,,1,,8,2,1,,1,
+comment -- Source for California cases = SF Chronicle.  Source for India = World Health Organization,,,,,,,,,,,,
+COMMENT Modeling variables -------------------------------------------------------,,,,,,,,,,,,
+lockdown^,3--20,3--17,3--17,3--17,3--17,3--17,3--17,3--20,3--20,3--20,3--20,
+staffed_beds#,20000,,,,,,10000,7500,,,,
+ventilators#,3000,,,,,,1500,1000,,,,
+comment -- multiply these values times the number of ventilators,,,,,,,,,,,,
+icu_open_lo##,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,
+icu_open_hi##,0.33,0.33,0.33,0.33,0.33,0.33,0.33,0.33,0.33,0.33,0.33,
+comment -- these are swags for data that should be easy to get -- at which time we replace percentage swags with accurate counts,,,,,,,,,,,,
+icu_fraction##,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,0.05,
+hosp_fraction##,0.22,0.22,0.22,0.22,0.22,0.22,0.22,0.22,0.22,0.22,0.22,
+COMMENT Plot controls ----------------------------------------------------------------,,,,,,,,,,,,
+project_from^,3--18,3--16,,,,,3--15,3--18,3--18,3--18,3--18,3--9
+project_ndays#,21,21,,,,,21,21,21,21,21,30
+drawplot0#,1,0,0,0,0,0,1,1,0,0,0,0
+drawplot1#,1,1,0,0,0,0,1,1,0,0,0,0
+drawplot2#,1,0,0,0,0,0,1,1,0,0,0,0
+drawplot3#,1,0,0,0,0,0,1,1,0,0,0,0
+COMMENT,LA County,Santa Clara,San Mateo,San Francisco,Alameda,Contra Costa,SF Bay5,San Diego,Sacramento,San Joaquin,Sac+Quin,India
