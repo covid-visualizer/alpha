@@ -2,7 +2,7 @@
 
 This software attempts to generate visualizations of epidemic and hospital data that leaders can quickly assimilate and use in making effective decisions.
 
-CoronaCurves is easy to set up and run out of the box.  It is not, however, configured to be easily customizable.  If you want different functions you will have to get dirty with the Python code.  Feel free to fork this repository.
+CoronaCurves is easy to set up and run out of the box.  It is not, however, configured to be easily customizable.  If you want different functions you will have to get dirty with the Python code.  Feel free to fork this repository.  The software is in the public domain.  However, it is in no way endorsed by the Department of Defense, the Air National Guard, or the California Military Department.
 
 Expect evolution in the software and incompatible changes.  CoronaCurves is being made available early -- because that's what an epidemic demands.
 
