@@ -22,7 +22,7 @@ Ultimately, getting good data and understanding its baked-in assumptions will be
 <a name="requirements"></a>
 # Requirements, Installation, and Execution
 
-You will need Python 2.7 and the following code modules:
+This will work with Python 2.7 or Python 3.X and the following code modules:
 
 * Matplotlib
 * Numpy

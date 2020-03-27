@@ -66,7 +66,7 @@ class CasesList:
         p_opt, p_cov = scipy.optimize.curve_fit(lambda t,a,b: a*np.exp(b*t), ii_ofdata, vv_linear,  p0=None)
         #print 793333, p_opt
         #print 794444, p_cov
-        ii_predict = sorted( set( list(ii_ofdata) + range(n_days+1) ) )
+        ii_predict = sorted( set( list(ii_ofdata) + list(range(n_days+1)) ) )
         ii_predict = np.array( sorted(ii_predict) )
         vv_fit = p_opt[0]*np.exp(p_opt[1]*ii_predict)
         return list(ii_predict), list(vv_fit), p_opt
@@ -91,7 +91,7 @@ class Datum:
         try:
             fn = self.val_converter
             #print 3313, fn, val_string
-            self.value = apply( fn, (val_string,) )
+            self.value = fn(*(val_string,))
         except:
             raise Exception( 'Error in row %d / col %d: Expected %s, which %s is not.' %
                              ( rownum, colnum, self.val_typename, val_string ) )
@@ -118,7 +118,7 @@ class StringDatum( Datum ):
 
 
 class County:
-    legal_keys = filter( None, [ x.strip() for x in """county_name
+    legal_keys = [_f for _f in [ x.strip() for x in """county_name
                                                        shortname
                                                        icu_total#
                                                        icu_open#
@@ -135,7 +135,7 @@ class County:
                                                        drawplot1#
                                                        drawplot2#
                                                        drawplot3#
-                                                       """.split('\n') ] )
+                                                       """.split('\n') ] if _f]
     
     def __init__( self ):
         self.cases_list = CasesList()
@@ -150,7 +150,7 @@ class County:
             value_instance = Datum.Instantiate( rownum, colnum, key, val_string )
             assert value_instance.key_name in self.legal_keys, \
                    'In row %d got unexpected variable name: %s' % ( rownum, key )
-            assert value_instance.key_name not in self.__dict__.keys(), \
+            assert value_instance.key_name not in list(self.__dict__.keys()), \
                    'In row %d found duplicate variable name: %s' % ( rownum, key )
             setattr( self, value_instance.var_name, value_instance.value )
 
@@ -176,13 +176,13 @@ class Plot:
         plt.figure()
         fig, axlist = self.calculate_n_axes( self.my_counties )
         if self.my_counties:
-            print 'Starting %s for counties %s' % ( self.__class__.__name__, self.my_counties )
+            print('Starting %s for counties %s' % ( self.__class__.__name__, self.my_counties ))
             self.draw_each_county( axlist )
             self.draw_standard( axlist )
             fig_title = self.calc_title( self.my_counties )
             if fig_title: plt.title( fig_title )
             pathname = self.save()
-            print '    Wrote to %s' % pathname
+            print('    Wrote to %s' % pathname)
     
     def draw_each_county( self, axlist ):
         ax_i = 0
