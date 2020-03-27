@@ -1,5 +1,5 @@
 # Python 2.7.15 / Anaconda
 
 matplotlib==2.02
-numpy=1.16.6
+numpy==1.16.6
 scipy==1.2.
