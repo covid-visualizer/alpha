@@ -3,3 +3,4 @@
 matplotlib==2.02
 numpy==1.16.6
 scipy==1.2.
+xlrd
