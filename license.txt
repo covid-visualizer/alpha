@@ -1,0 +1,8 @@
+From:
+https://dodcio.defense.gov/Open-Source-Software-FAQ/#Q:_Can_government_employees_develop_software_and_release_it_under_an_open_source_license.3F
+
+"Software written entirely by federal government employees as part of their official duties can be released as “public domain” software. This is not under a copyright license, it is absence of a license. By some definitions this is technically not an open source license (because no license is needed), but “public domain” software can be legally used, modified, and combined with other software without restriction. Thus, “public domain” software provides recipients all of the rights that open source software must provide."
+
+The CoronaCurves software in this repository was written entirely by federal government employees as part of their official duties.
+
+Note, however, that certain software packages incorporated into CoronaCurves may carry use restrictions.  It is your responsibility to check them.
