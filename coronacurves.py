@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-CoronaCurves
-Version Alpa.1.01
+Version Alpha.1.01
 24 March 2020
 
 Draws useful graphs related to an epidemic and its intersection with hospital capacities.
