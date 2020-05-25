@@ -53,18 +53,18 @@ The software produces four classes of graphs, some of which include interesting 
     * You can graph multiple counties on one plot.
     * You can annotate each county's line with a mark indicating when the county began lockdown.
     * In all plots, days are counted relative to the day the plot is generated, which is labeled as Day 0.  Negatively-numbered days are in the past. Positively-numbered days are in the future.
-    * <a href="https://raw.githubusercontent.com/covid-visualizer/version01/master/example_plots/plot0_example.png">Example</a>
+    * <a href="https://raw.githubusercontent.com/covid-visualizer/alpha/master/example_plots/plot0_example.png">Example</a>
     
 * Plot 1 -- same as Plot 0, but with a logarithmic y-axis
     * When cases are increasing exponentially, this reduces the exponential curve to a straight line.
     * Use this graph to eyeball whether the epidemic curve is flattening in any geographic region.
-    * <a href="https://raw.githubusercontent.com/covid-visualizer/version01/master/example_plots/plot1_example.png">Example</a>
+    * <a href="https://raw.githubusercontent.com/covid-visualizer/alpha/master/example_plots/plot1_example.png">Example</a>
 
 * Plot 2 -- extrapolated total cases
     * You specify an extrapolation start-date, and the software best-fits an exponential to the total-case curve starting at that date.  The best-fit-exponential will appear as a straight line because of the logarithmic y-axis.
     * The start of the extrapolation is indicated with a large dot on the plot.
     * The doubling-time for cases is output within the title of the plots.  
-    * <a href="https://raw.githubusercontent.com/covid-visualizer/version01/master/example_plots/plot2_example.png">Example</a>
+    * <a href="https://raw.githubusercontent.com/covid-visualizer/alpha/master/example_plots/plot2_example.png">Example</a>
 
 * Plot 3 -- danger lines
     * This is the most helpful graph for leaders.
@@ -77,7 +77,7 @@ The software produces four classes of graphs, some of which include interesting 
             * This number is specified as a range
     * The graph shows when the epidemic is expected to hit each of the capacity limits.
         * For the number of ICU beds, the uncertainty in the epidemic is propagated to an uncertainty in the time when that capacity is exceeded.
-    * <a href="https://raw.githubusercontent.com/covid-visualizer/version01/master/example_plots/plot3_example.png">Example</a>
+    * <a href="https://raw.githubusercontent.com/covid-visualizer/alpha/master/example_plots/plot3_example.png">Example</a>
 
 <a name="model"></a>
 # Model and Math
