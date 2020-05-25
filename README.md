@@ -30,9 +30,9 @@ This will work with Python 2.7 or Python 3.X and the following code modules:
 
 Use `pip` to install the code modules.  The `requirements.txt` file lists the version numbers that the developer used.  As always, installing inside a virtualenv is recommended.
 
-Execution is normally via the command-line invocation: `python coronacurves.py`
+Execution is normally via the command-line invocation: `python mainscript.py`
 
-For the moment there are no command-line arguments.  You should execute the above command while your command-line tool has, as its current working directory, the same directory in which `coronacurves.py` is saved.  No fooling with PYTHONPATH is needed.
+For the moment there are no command-line arguments.  You should execute the above command while your command-line tool has, as its current working directory, the same directory in which `mainscript.py` is saved.  No fooling with PYTHONPATH is needed.
 
 <a name="quirks"></a>
 # Quirks
